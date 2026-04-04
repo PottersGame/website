@@ -183,7 +183,7 @@ section {
 
 @keyframes glow {
   from { text-shadow: 0 0 10px var(--orange-dim); }
-  to   { text-shadow: 0 0 25px var(--orange), 0 0 40px var(--orange); }
+  to { text-shadow: 0 0 25px var(--orange), 0 0 40px var(--orange); }
 }
 
 .hero p {
