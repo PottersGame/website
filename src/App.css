@@ -1,0 +1,229 @@
+:root {
+  --orange: #fb6d00;
+  --orange-dim: rgba(251, 109, 0, 0.2);
+  --dark-bg: #050505;
+  --darker-bg: #000000;
+  --card-bg: rgba(20, 20, 20, 0.8);
+  --light-text: #ffffff;
+  --dim-text: #b0b0b0;
+  --font-main: 'Exo 2', sans-serif;
+  --font-header: 'Orbitron', sans-serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Sci-fi Grid Background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(rgba(251, 109, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(251, 109, 0, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-header);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--orange);
+}
+
+.text-orange { color: var(--orange); }
+
+/* Header & Nav */
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--orange-dim);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--orange);
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--light-text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--orange);
+  text-shadow: 0 0 10px var(--orange);
+}
+
+/* Sections */
+section {
+  padding: 80px 0;
+}
+
+/* Hero */
+.hero {
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.subtitle {
+  font-family: var(--font-header);
+  font-size: 1.2rem;
+  color: var(--orange);
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px var(--orange-dim); }
+  to { text-shadow: 0 0 25px var(--orange), 0 0 40px var(--orange); }
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: var(--dim-text);
+  max-width: 800px;
+}
+
+/* Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--orange-dim);
+  padding: 2rem;
+  border-radius: 4px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: var(--orange);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(251, 109, 0, 0.1);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Tech Specs */
+.tech-spec {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--orange-dim);
+  padding: 1rem 0;
+}
+
+.tech-label {
+  color: var(--dim-text);
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--orange-dim);
+  text-align: center;
+  color: var(--dim-text);
+  font-size: 0.8rem;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: transparent;
+  color: var(--orange);
+  border: 1px solid var(--orange);
+  font-family: var(--font-header);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 2rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--orange);
+  color: var(--darker-bg);
+  box-shadow: 0 0 20px var(--orange);
+}
