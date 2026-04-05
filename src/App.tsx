@@ -9,8 +9,9 @@ function App() {
   const team = [
     { name: "Adam Hrnčiar", role: "Software & Electronics", desc: "System architecture and dual-processor integration lead." },
     { name: "Matej Matúš", role: "Mechanical Design", desc: "CAD modeling and 3D printing of the active-descent chassis." },
-    { name: "Matej Bulík", role: "Electronics & Software", desc: "Power systems and flight control firmware specialist." },
-    { name: "Jakub Panák", role: "Outreach & Marketing", desc: "Public relations, documentation, and mission branding." }
+    { name: "Matej Bulík", role: "Electronics", desc: "Power systems and flight control firmware specialist." },
+    { name: "Peter Takáč", role: "Software", desc: "Ground station development and telemetry visualization." },
+    { name: "Jakub Panák", role: "Documentation & Marketing", desc: "Public relations, outreach, and mission branding." }
   ];
 
   const specs = [
@@ -121,6 +122,36 @@ function App() {
               <div className="tech-spec"><span className="tech-label">Protocol</span><span>ELRS 2.4 GHz</span></div>
               <div className="tech-spec"><span className="tech-label">Telemetry</span><span>CRSF / MAVLink</span></div>
               <div className="tech-spec"><span className="tech-label">Range</span><span>Long Range (TCXO)</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="testing" className="container">
+          <h2>Verification &amp; Testing</h2>
+          <div className="card" style={{ borderLeft: '4px solid var(--orange)', background: 'rgba(251, 109, 0, 0.05)' }}>
+            <h3 style={{ fontSize: '1rem', color: 'var(--orange)', marginBottom: '1rem' }}>Engineering Note: Testing Status</h3>
+            <p style={{ fontSize: '0.95rem', lineHeight: '1.7' }}>
+              Due to unexpected supply chain delays regarding our ESC and Radio Controller, combined with the extended time required for final chassis assembly and software flashing, our full testing phase will commence immediately following the submission of this CDR.
+            </p>
+            <p style={{ fontSize: '0.95rem', lineHeight: '1.7', marginTop: '1rem' }}>
+              We are prioritizing rigorous, methodical testing over rushed execution. All verification tests outlined below are scheduled to be completed between <strong>April 6 and April 9, 2026</strong>. Complete test logs, CSV data, and video evidence will be published immediately upon completion on our official engineering portal.
+            </p>
+          </div>
+          <div className="grid" style={{ marginTop: '2rem', opacity: 0.6 }}>
+            <div className="card">
+              <h3>Static Bench Tests</h3>
+              <p style={{ fontSize: '0.85rem' }}>Sensor calibration, telemetry link stability, and power distribution thermal profiles.</p>
+              <div className="text-orange" style={{ fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>PENDING</div>
+            </div>
+            <div className="card">
+              <h3>Propulsion &amp; ESC</h3>
+              <p style={{ fontSize: '0.85rem' }}>Thrust-to-weight ratio verification and motor response latency under ArduPilot control.</p>
+              <div className="text-orange" style={{ fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>PENDING</div>
+            </div>
+            <div className="card">
+              <h3>Vision &amp; Landing</h3>
+              <p style={{ fontSize: '0.85rem' }}>ArUco marker detection reliability at various altitudes and lighting conditions.</p>
+              <div className="text-orange" style={{ fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>PENDING</div>
             </div>
           </div>
         </section>
