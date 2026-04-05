@@ -27,7 +27,7 @@ function App() {
       <header>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <img src="/logo.jpg" alt="HYPERION Logo" style={{ height: '40px', borderRadius: '4px' }} />
+            <img src="./logo.jpg" alt="HYPERION Logo" style={{ height: '40px', borderRadius: '4px' }} />
             <a href="#" className="logo">HYPERION</a>
           </div>
 
