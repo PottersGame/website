@@ -38,6 +38,7 @@ function App() {
               <li><a href="#data" onClick={closeMenu}>Data</a></li>
               <li><a href="#tech" onClick={closeMenu}>Stack</a></li>
               <li><a href="#team" onClick={closeMenu}>Team</a></li>
+              <li><a href="#documents" onClick={closeMenu}>CDR</a></li>
               <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
             </ul>
           </nav>
@@ -173,6 +174,25 @@ function App() {
           </div>
         </section>
  
+
+        <section id="documents" className="container">
+          <h2>Documents</h2>
+          <div className="card" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
+            <div>
+              <h3 style={{ marginBottom: '0.4rem' }}>Critical Design Review (CDR)</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--dim-text)' }}>TN_HYPERION_CDR.pdf &mdash; Full technical design review submitted to ESA CanSat.</p>
+            </div>
+            <a
+              href="./TN_HYPERION_CDR.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+              download
+            >
+              Download CDR
+            </a>
+          </div>
+        </section>
 
         <section id="team" className="container">
           <h2>The Team</h2>
