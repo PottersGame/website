@@ -129,32 +129,50 @@ function App() {
         <section id="testing" className="container">
           <h2>Verification &amp; Testing</h2>
           <div className="card" style={{ borderLeft: '4px solid var(--orange)', background: 'rgba(251, 109, 0, 0.05)' }}>
-            <h3 style={{ fontSize: '1rem', color: 'var(--orange)', marginBottom: '1rem' }}>Engineering Note: Testing Status</h3>
+            <h3 style={{ fontSize: '1rem', color: 'var(--orange)', marginBottom: '1rem' }}>Engineering Note: Testing Progress</h3>
             <p style={{ fontSize: '0.95rem', lineHeight: '1.7' }}>
-              Due to unexpected supply chain delays regarding our ESC and Radio Controller, combined with the extended time required for final chassis assembly and software flashing, our full testing phase will commence immediately following the submission of this CDR.
-            </p>
-            <p style={{ fontSize: '0.95rem', lineHeight: '1.7', marginTop: '1rem' }}>
-              We are prioritizing rigorous, methodical testing over rushed execution. All verification tests outlined below are scheduled to be completed between <strong>April 6 and April 9, 2026</strong>. Complete test logs, CSV data, and video evidence will be published immediately upon completion on our official engineering portal.
+              Testing is now underway. Our BME280 primary mission sensor has been verified on April 7, 2026. Full integration testing with flight controller, ELRS telemetry, and propulsion systems is scheduled for April 8–9.
             </p>
           </div>
-          <div className="grid" style={{ marginTop: '2rem', opacity: 0.6 }}>
-            <div className="card">
-              <h3>Static Bench Tests</h3>
-              <p style={{ fontSize: '0.85rem' }}>Sensor calibration, telemetry link stability, and power distribution thermal profiles.</p>
-              <div className="text-orange" style={{ fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>PENDING</div>
+ 
+          <div className="grid" style={{ marginTop: '2rem' }}>
+            {/* ✅ PASSED */}
+            <div className="card" style={{ borderTop: '3px solid #00ff88' }}>
+              <h3>BME280 Sensor Test</h3>
+              <p style={{ fontSize: '0.85rem' }}>Primary mission sensor verified at 5 Hz logging. Zero dropped frames across 540 samples.</p>
+              <div style={{ marginTop: '1rem', fontSize: '0.8rem', color: 'var(--dim-text)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                  <span>Samples</span><span style={{ color: 'var(--light-text)' }}>540 @ 5 Hz</span>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                  <span>Temp Range</span><span style={{ color: 'var(--light-text)' }}>25.40 – 32.87 °C</span>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                  <span>Press Range</span><span style={{ color: 'var(--light-text)' }}>988.17 – 1093.80 hPa</span>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0' }}>
+                  <span>Dropped Frames</span><span style={{ color: '#00ff88' }}>0</span>
+                </div>
+              </div>
+              <div style={{ color: '#00ff88', fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>✓ PASSED — April 7, 2026</div>
             </div>
-            <div className="card">
+ 
+            {/* ⏳ PENDING */}
+            <div className="card" style={{ opacity: 0.6 }}>
               <h3>Propulsion &amp; ESC</h3>
               <p style={{ fontSize: '0.85rem' }}>Thrust-to-weight ratio verification and motor response latency under ArduPilot control.</p>
-              <div className="text-orange" style={{ fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>PENDING</div>
+              <div className="text-orange" style={{ fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>⏳ SCHEDULED — April 8</div>
             </div>
-            <div className="card">
+ 
+            {/* ⏳ PENDING */}
+            <div className="card" style={{ opacity: 0.6 }}>
               <h3>Vision &amp; Landing</h3>
               <p style={{ fontSize: '0.85rem' }}>ArUco marker detection reliability at various altitudes and lighting conditions.</p>
-              <div className="text-orange" style={{ fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>PENDING</div>
+              <div className="text-orange" style={{ fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>⏳ SCHEDULED — April 8–9</div>
             </div>
           </div>
         </section>
+ 
 
         <section id="team" className="container">
           <h2>The Team</h2>
