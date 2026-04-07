@@ -38,6 +38,7 @@ function App() {
               <li><a href="#data" onClick={closeMenu}>Data</a></li>
               <li><a href="#tech" onClick={closeMenu}>Stack</a></li>
               <li><a href="#team" onClick={closeMenu}>Team</a></li>
+              <li><a href="#documents" onClick={closeMenu}>CDR</a></li>
               <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
             </ul>
           </nav>
@@ -64,6 +65,29 @@ function App() {
             <div style={{ marginTop: '2rem' }}>
               <a href="#mission" className="btn">Mission Details</a>
             </div>
+          </div>
+        </section>
+
+        <section id="documents" className="container">
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: '2rem' }}>
+            <h2 style={{ margin: 0 }}>Critical Design Review</h2>
+            <a
+              href="./TN_HYPERION_CDR.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+              style={{ marginTop: 0 }}
+              download
+            >
+              Download PDF
+            </a>
+          </div>
+          <div className="pdf-viewer-wrapper">
+            <iframe
+              src="./TN_HYPERION_CDR.pdf"
+              title="HYPERION Critical Design Review"
+              className="pdf-viewer"
+            />
           </div>
         </section>
 
