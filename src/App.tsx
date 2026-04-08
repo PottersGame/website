@@ -226,7 +226,7 @@ function App() {
               🛰️ ESA CanSat
             </a>
             <a
-              href="mailto:hyperion@potter.software"
+              href="mailto:cansat430@gmail.com"
               className="contact-link"
             >
               ✉️ Email Us
