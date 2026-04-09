@@ -155,7 +155,7 @@ function App() {
           <div className="card" style={{ borderLeft: '4px solid var(--orange)', background: 'rgba(251, 109, 0, 0.05)' }}>
             <h3 style={{ fontSize: '1rem', color: 'var(--orange)', marginBottom: '1rem' }}>Engineering Note: Testing Progress</h3>
             <p style={{ fontSize: '0.95rem', lineHeight: '1.7' }}>
-              Testing is now underway. Our BME280 primary mission sensor has been verified on April 7, 2026. Full integration testing with flight controller, ELRS telemetry, and propulsion systems is scheduled for April 8–9.
+              Testing is now underway. Our BME280 primary mission sensor was verified on April 7, 2026, and our computer vision & ArUco detection pipeline was validated on April 9. Propulsion integration testing is scheduled to follow.
             </p>
           </div>
  
@@ -188,11 +188,31 @@ function App() {
               <div className="text-orange" style={{ fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>⏳ SCHEDULED — April 8</div>
             </div>
  
-            {/* ⏳ PENDING */}
-            <div className="card" style={{ opacity: 0.6 }}>
-              <h3>Vision &amp; Landing</h3>
-              <p style={{ fontSize: '0.85rem' }}>ArUco marker detection reliability at various altitudes and lighting conditions.</p>
-              <div className="text-orange" style={{ fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>⏳ SCHEDULED — April 8–9</div>
+            {/* ✅ PASSED */}
+            <div className="card" style={{ borderTop: '3px solid #00ff88' }}>
+              <h3>Vision &amp; ArUco Detection</h3>
+              <p style={{ fontSize: '0.85rem' }}>ArUco marker detection pipeline verified at 800×600. 97% of frames processed under the 100 ms real-time threshold with robust detection across varied conditions.</p>
+              <div style={{ marginTop: '1rem', fontSize: '0.8rem', color: 'var(--dim-text)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                  <span>Frames Analysed</span><span style={{ color: 'var(--light-text)' }}>231</span>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                  <span>Detection Rate</span><span style={{ color: '#00ff88' }}>80.5 % (186 / 231)</span>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                  <span>Avg Frame Time</span><span style={{ color: '#00ff88' }}>74.6 ms</span>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                  <span>Median Frame Time</span><span style={{ color: 'var(--light-text)' }}>69.3 ms</span>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                  <span>P95 Frame Time</span><span style={{ color: 'var(--light-text)' }}>96.0 ms</span>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.3rem 0' }}>
+                  <span>Frames &lt; 100 ms</span><span style={{ color: '#00ff88' }}>97.0 %</span>
+                </div>
+              </div>
+              <div style={{ color: '#00ff88', fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>✓ PASSED — April 9, 2026</div>
             </div>
           </div>
         </section>
