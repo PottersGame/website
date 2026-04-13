@@ -84,14 +84,26 @@ function App() {
             </p>
           </div>
 
+          {/* Semifinal photo */}
+          <div style={{ marginBottom: '2rem', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.07)' }}>
+            <img
+              src="./semifinal.jpg"
+              alt="HYPERION CanSat held in hands after semifinal drop"
+              style={{ width: '100%', maxHeight: '480px', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
+            />
+            <div style={{ padding: '0.75rem 1rem', background: 'rgba(255,255,255,0.03)', fontSize: '0.82rem', color: 'var(--dim-text)' }}>
+              HYPERION after the semifinal drop — motors failed to deploy, but we had the best mission.
+            </div>
+          </div>
+
           <div className="grid" style={{ marginBottom: '2rem' }}>
             <div className="card" style={{ borderLeft: '4px solid var(--orange)' }}>
               <h3>Semifinal Recap</h3>
               <p style={{ fontSize: '0.92rem', lineHeight: '1.75' }}>
-                On competition day our motor failed to start — a last-minute electrical issue meant HYPERION never got off the ground under its own power. It was a hard moment for the whole team.
+                Our motors failed to deploy on competition day — an electrical fault grounded HYPERION before it could fly. A hard moment. But in every other aspect of the mission we performed at our best, and we know it.
               </p>
               <p style={{ fontSize: '0.92rem', lineHeight: '1.75', marginTop: '0.75rem' }}>
-                But we stayed composed, presented our full technical work to the judges, and explained every design decision behind the autonomous landing system. The judges saw the engineering — and we advanced.
+                We stayed composed, walked the judges through every design decision, and showed them exactly what HYPERION can do. The engineering spoke for itself — and we advanced to the nationals.
               </p>
               <div style={{ color: 'var(--orange)', fontSize: '0.78rem', fontWeight: 'bold', marginTop: '1.2rem', letterSpacing: '1px' }}>RESULT: QUALIFIED FOR NATIONALS</div>
             </div>
@@ -321,6 +333,14 @@ function App() {
               className="contact-link"
             >
               💻 GitHub
+            </a>
+            <a
+              href="https://www.instagram.com/team.hyperion.cansat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              📷 Instagram
             </a>
           </div>
         </section>
