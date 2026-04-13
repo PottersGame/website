@@ -76,11 +76,11 @@ function App() {
         <section id="competition" className="container">
           <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
             <div style={{ display: 'inline-block', background: 'rgba(251, 109, 0, 0.12)', border: '1px solid var(--orange)', color: 'var(--orange)', fontWeight: 'bold', fontSize: '0.75rem', letterSpacing: '2px', padding: '0.3rem 0.9rem', borderRadius: '4px', marginBottom: '1rem', textTransform: 'uppercase' }}>
-              April 2026 — Semifinal Complete
+              Nationals — ~4–5 May 2026
             </div>
             <h2 style={{ fontSize: '2rem', margin: '0 0 0.75rem' }}>We're Going to the Finals!</h2>
-            <p style={{ color: 'var(--dim-text)', maxWidth: '560px', margin: '0 auto', lineHeight: '1.7' }}>
-              Despite a tough day at the semifinal, HYPERION earned its place in the national finals. We pushed through — and we're not done yet.
+            <p style={{ color: 'var(--dim-text)', maxWidth: '580px', margin: '0 auto', lineHeight: '1.7' }}>
+              Despite a tough semifinal, HYPERION earned its place in the national finals in the first week of May. We're not coming back with the same can — we're building v2 from scratch.
             </p>
           </div>
 
@@ -115,6 +115,17 @@ function App() {
               <p style={{ fontSize: '0.75rem', color: 'var(--dim-text)', marginTop: '1rem' }}>
                 Hosted on kick.com/team-hyperion-cansat
               </p>
+            </div>
+
+            <div className="card" style={{ borderLeft: '4px solid #00ff88' }}>
+              <h3>HYPERION v2</h3>
+              <p style={{ fontSize: '0.92rem', lineHeight: '1.75' }}>
+                We're doing a complete rebuild before the finals. Every lesson from the semifinal — the motor fault, the integration issues, the time pressure — is going into a redesigned v2.
+              </p>
+              <p style={{ fontSize: '0.92rem', lineHeight: '1.75', marginTop: '0.75rem' }}>
+                Same mission, same autonomous landing goal. Better execution.
+              </p>
+              <div style={{ color: '#00ff88', fontSize: '0.78rem', fontWeight: 'bold', marginTop: '1.2rem', letterSpacing: '1px' }}>IN DEVELOPMENT — FINALS READY BY EARLY MAY</div>
             </div>
           </div>
         </section>
