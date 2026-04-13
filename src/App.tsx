@@ -34,6 +34,7 @@ function App() {
 
           <nav className={menuOpen ? 'open' : ''}>
             <ul>
+              <li><a href="#competition" onClick={closeMenu} style={{ color: 'var(--orange)', fontWeight: 'bold' }}>Finals</a></li>
               <li><a href="#mission" onClick={closeMenu}>Mission</a></li>
               <li><a href="#data" onClick={closeMenu}>Data</a></li>
               <li><a href="#tech" onClick={closeMenu}>Stack</a></li>
@@ -59,11 +60,84 @@ function App() {
       <main>
         <section className="hero">
           <div className="container">
+            <div style={{ display: 'inline-block', background: 'var(--orange)', color: '#000', fontWeight: 'bold', fontSize: '0.8rem', letterSpacing: '2px', padding: '0.35rem 1rem', borderRadius: '4px', marginBottom: '1.2rem', textTransform: 'uppercase' }}>
+              Finals Bound
+            </div>
             <h1>HYPERION</h1>
             <p className="subtitle">Piaristické gymnázium Jozefa Braneckého, Trenčín</p>
             <p>Pushing the limits of <strong>Autonomous Precision Landing</strong>. No parachute. Just code and physics.</p>
-            <div style={{ marginTop: '2rem' }}>
-              <a href="#mission" className="btn">Mission Details</a>
+            <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <a href="#competition" className="btn">Competition Update</a>
+              <a href="#mission" className="btn" style={{ background: 'transparent', border: '1px solid var(--orange)', color: 'var(--orange)' }}>Mission Details</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="competition" className="container">
+          <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+            <div style={{ display: 'inline-block', background: 'rgba(251, 109, 0, 0.12)', border: '1px solid var(--orange)', color: 'var(--orange)', fontWeight: 'bold', fontSize: '0.75rem', letterSpacing: '2px', padding: '0.3rem 0.9rem', borderRadius: '4px', marginBottom: '1rem', textTransform: 'uppercase' }}>
+              Nationals — ~4–5 May 2026
+            </div>
+            <h2 style={{ fontSize: '2rem', margin: '0 0 0.75rem' }}>We're Going to the Finals!</h2>
+            <p style={{ color: 'var(--dim-text)', maxWidth: '580px', margin: '0 auto', lineHeight: '1.7' }}>
+              Despite a tough semifinal, HYPERION earned its place in the national finals in the first week of May. We're not coming back with the same can — we're building v2 from scratch.
+            </p>
+          </div>
+
+          {/* Semifinal photo */}
+          <div style={{ marginBottom: '2rem', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.07)' }}>
+            <img
+              src="./semifinal.jpg"
+              alt="HYPERION CanSat held in hands after semifinal drop"
+              style={{ width: '100%', maxHeight: '480px', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
+            />
+            <div style={{ padding: '0.75rem 1rem', background: 'rgba(255,255,255,0.03)', fontSize: '0.82rem', color: 'var(--dim-text)' }}>
+              HYPERION after the semifinal drop — motors failed to deploy, but we had the best mission.
+            </div>
+          </div>
+
+          <div className="grid" style={{ marginBottom: '2rem' }}>
+            <div className="card" style={{ borderLeft: '4px solid var(--orange)' }}>
+              <h3>Semifinal Recap</h3>
+              <p style={{ fontSize: '0.92rem', lineHeight: '1.75' }}>
+                Our motors failed to deploy on competition day — an electrical fault grounded HYPERION before it could fly. A hard moment. But in every other aspect of the mission we performed at our best, and we know it.
+              </p>
+              <p style={{ fontSize: '0.92rem', lineHeight: '1.75', marginTop: '0.75rem' }}>
+                We stayed composed, walked the judges through every design decision, and showed them exactly what HYPERION can do. The engineering spoke for itself — and we advanced to the nationals.
+              </p>
+              <div style={{ color: 'var(--orange)', fontSize: '0.78rem', fontWeight: 'bold', marginTop: '1.2rem', letterSpacing: '1px' }}>RESULT: QUALIFIED FOR NATIONALS</div>
+            </div>
+
+            <div className="card" style={{ borderLeft: '4px solid #444' }}>
+              <h3>Fall Footage</h3>
+              <p style={{ fontSize: '0.92rem', lineHeight: '1.7', color: 'var(--dim-text)' }}>
+                Clip from our semifinal drop — watch HYPERION's fall.
+              </p>
+              <div style={{ marginTop: '1.5rem' }}>
+                <a
+                  href="https://kick.com/team-hyperion-cansat/clips/clip_01KNVJ5FCRNJVM14F9GMDC3D9P"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+                >
+                  ▶ Watch on Kick
+                </a>
+              </div>
+              <p style={{ fontSize: '0.75rem', color: 'var(--dim-text)', marginTop: '1rem' }}>
+                Hosted on kick.com/team-hyperion-cansat
+              </p>
+            </div>
+
+            <div className="card" style={{ borderLeft: '4px solid #00ff88' }}>
+              <h3>HYPERION v2</h3>
+              <p style={{ fontSize: '0.92rem', lineHeight: '1.75' }}>
+                We're doing a complete rebuild before the finals. Every lesson from the semifinal — the motor fault, the integration issues, the time pressure — is going into a redesigned v2.
+              </p>
+              <p style={{ fontSize: '0.92rem', lineHeight: '1.75', marginTop: '0.75rem' }}>
+                Same mission, same autonomous landing goal. Better execution.
+              </p>
+              <div style={{ color: '#00ff88', fontSize: '0.78rem', fontWeight: 'bold', marginTop: '1.2rem', letterSpacing: '1px' }}>IN DEVELOPMENT — FINALS READY BY EARLY MAY</div>
             </div>
           </div>
         </section>
@@ -153,9 +227,9 @@ function App() {
         <section id="testing" className="container">
           <h2>Verification &amp; Testing</h2>
           <div className="card" style={{ borderLeft: '4px solid var(--orange)', background: 'rgba(251, 109, 0, 0.05)' }}>
-            <h3 style={{ fontSize: '1rem', color: 'var(--orange)', marginBottom: '1rem' }}>Engineering Note: Testing Progress</h3>
+            <h3 style={{ fontSize: '1rem', color: 'var(--orange)', marginBottom: '1rem' }}>Engineering Note: Pre-Competition Status</h3>
             <p style={{ fontSize: '0.95rem', lineHeight: '1.7' }}>
-              Testing is now underway. Our BME280 primary mission sensor was verified on April 7, 2026, and our computer vision & ArUco detection pipeline was validated on April 9. Propulsion integration testing is scheduled to follow.
+              All pre-competition verification was completed. BME280 primary mission sensor was verified on April 7, 2026, and the computer vision & ArUco detection pipeline was validated on April 9. At the semifinal, the motor failed to start due to an electrical issue — but HYPERION's design and software were fully demonstrated to the judges. We are now preparing for the national finals.
             </p>
           </div>
  
@@ -181,11 +255,12 @@ function App() {
               <div style={{ color: '#00ff88', fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>✓ PASSED — April 7, 2026</div>
             </div>
  
-            {/* ⏳ PENDING */}
-            <div className="card" style={{ opacity: 0.6 }}>
+            {/* ⚠ ISSUE */}
+            <div className="card" style={{ borderTop: '3px solid #ff4444' }}>
               <h3>Propulsion &amp; ESC</h3>
               <p style={{ fontSize: '0.85rem' }}>Thrust-to-weight ratio verification and motor response latency under ArduPilot control.</p>
-              <div className="text-orange" style={{ fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>⏳ SCHEDULED — April 8</div>
+              <p style={{ fontSize: '0.82rem', color: 'var(--dim-text)', marginTop: '0.75rem' }}>Motor failed to start at the semifinal due to an electrical fault. Full system review underway ahead of finals.</p>
+              <div style={{ color: '#ff4444', fontSize: '0.75rem', marginTop: '1rem', fontWeight: 'bold' }}>⚠ FAULT — Semifinal Day</div>
             </div>
  
             {/* ✅ PASSED */}
@@ -258,6 +333,14 @@ function App() {
               className="contact-link"
             >
               💻 GitHub
+            </a>
+            <a
+              href="https://www.instagram.com/team.hyperion.cansat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              📷 Instagram
             </a>
           </div>
         </section>
